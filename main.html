@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">   
+  <link rel="stylesheet" href="custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+      <div class="row">
+        <nav class="col-auto sidebar" id="bootstrap-overrides-sidebar">
+          
+          <ul class="nav flex-column" >
+            <li class="nav-item">
+              <a class="nav-link color-nav " href="#">Browse <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" id="bootstrap-overrides-navitem-extra-padding">
+              <a class="nav-link color-nav" href="#">Radio</a>
+            </li>
+            
+            <li>
+                <a href="#" class="color-nav">YOUR LIBRARY</a>
+                <ul class="nav nav-stacked flex-column">
+                    <li class="nav-item" id="bootstrap-overrides-navitem">
+                      <a class="nav-link color-nav" href="#">Your Daily Mix</a>
+                    </li>     
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Recently Played</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Songs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Albums</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Stations</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Local Files</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Podcasts</a>
+                    </li>      
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#" class="color-nav">PLAYLISTS</a>
+                <ul class="nav nav-stacked flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link color-nav" href="#">Discover Weekly</a>
+                    </li> 
+                </ul>
+            </li>
+          </ul>         
+    
+        </nav>
+
+        <main class="ml-sm-auto col-md" role="main">
+            
+            <div class ="row" id="top-tool">
+                    
+                    <div class="col-sm-3 col-md-3">
+                        <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><p class="glyphicon glyphicon-search"></p></button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    
+                    <button type=button class="btn btn-primary upgrade-btn">UPGRADE</button>
+            </div>
+            
+            <div id="bannerimage"></div>
+            
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark" 
+                 id="bootstrap-overrides-navbar">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">OVERVIEW <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">CHARTS</a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">GENRES & MOODS</a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">NEW RELEASES</a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">DISCOVER</a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">CONCERTS</a>
+                  </li>
+                  <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
+                    <a class="nav-link" href="#">MORE</a>
+                  </li>
+                </ul>
+            </nav>
+            
+        </main>
+        <div id="right-col">
+          <h1>See what your friend are playing~~ Oh wait you got none</h1>
+        </div>
+                
+      </div>
+    </div>
+    <footer class="fixed-bottom">
+            
+    </footer>
+</body>
+    

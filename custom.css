@@ -1,0 +1,69 @@
+body {
+    background-color: #343a40;
+}
+
+#bootstrap-overrides-sidebar{
+    background-color: #2E2E2E;  
+    height: 100vh;   
+    width: 12%;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#bootstrap-overrides-navitem-extra-padding{
+    padding-bottom: 20px;
+    
+}
+#bootstrap-overrides-navitem{
+    color: white;
+}
+
+#bootstrap-overrides-navbar{
+    
+}
+#bootstrap-overrides-navbar-navitems{
+    margin-left: 48px;
+    margin-right:48px;
+}
+#bannerimage{
+  width: 100%;
+  background-image: url(http://www.scdn.co/i/_global/open-graph-default.png);
+  height: 405px;
+  background-color: purple;
+  background-position: center;
+}
+
+#top-tool{
+    width: 100%;
+    height: 40px;
+    background-color: #2E2E2E;
+    margin-left:5px;
+}
+
+#right-col{
+    width: 15%;
+    height: 100vh;
+    background-color: #2E2E2E;
+    color: white;
+    background-position: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.color-nav{
+    color: white;
+}
+
+.upgrade-btn{
+    color: white;
+    background-color: #2E2E2E;
+    border: white;
+    border-color: white;
+    margin-left: 800px;
+}
+
+footer{
+    width: 100%;
+    background-color: #4E4E4E;
+    height: 9%;
+}
