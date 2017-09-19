@@ -1,6 +1,6 @@
 body {
     background-color: #343a40;
-    font-size: 0.75em;
+    font-size: 0.9vw;
 }
 
 #bootstrap-overrides-sidebar{
@@ -15,17 +15,34 @@ body {
     padding-bottom: 20px;
     
 }
-#bootstrap-overrides-navitem{
+
+.color-nav{
     color: white;
+    font-weight: 400;
 }
 
+.color-nav-header{
+    color: white;
+    padding-left: 7.5%;
+    font-weight: 200;
+    font-size: 0.8vw;
+}
 #bootstrap-overrides-navbar{
     width: 100%;
+    
 }
 #bootstrap-overrides-navbar-navitems{
-    margin-left: 2.5%;
-    margin-right:2.5%;
+    
 }
+
+#navbar-ul{
+    list-style: none;    
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 #bannerimage{
   width: 100%;
   background-image: url(http://www.scdn.co/i/_global/open-graph-default.png);
@@ -51,10 +68,6 @@ body {
     padding-top: 100px;
 }
 
-.color-nav{
-    color: white;
-}
-
 .upgrade-btn{
     color: white;
     background-color: #2E2E2E;
@@ -66,4 +79,18 @@ footer{
     width: 100%;
     background-color: #4E4E4E;
     height: 9%;
+}
+
+.suggestion-container{
+    margin: 1% 4% 1% 4.7%;
+    color: white;
+    
+}
+
+.suggestion-boxes{
+    margin: 0.8%;
+}
+
+.suggestion-boxes-description{
+    padding-top: 0.5vw;
 }
