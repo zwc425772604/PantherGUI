@@ -1,14 +1,16 @@
 body {
     background-color: #343a40;
     font-size: 0.9vw;
+    overflow:hidden;
 }
 
 #bootstrap-overrides-sidebar{
     background-color: #2E2E2E;  
     height: 100vh;   
-    width: 12%;
+    width: 15%;
     padding-top: 5px;
     padding-left: 10px;
+    position: fixed;
 }
 
 #bootstrap-overrides-navitem-extra-padding{
@@ -19,13 +21,14 @@ body {
 .color-nav{
     color: white;
     font-weight: 400;
+    font-size: 1vw;
 }
 
 .color-nav-header{
     color: white;
     padding-left: 7.5%;
     font-weight: 200;
-    font-size: 0.8vw;
+    font-size: 1vw;
 }
 #bootstrap-overrides-navbar{
     width: 100%;
@@ -43,23 +46,28 @@ body {
     width: 100%;
 }
 
+.main-page{
+    margin-left: 15%;
+    width: 70.1%;
+    position: relative;
+
+}
+
 #bannerimage{
-  width: 100%;
-  background-image: url(http://www.scdn.co/i/_global/open-graph-default.png);
-  height: 30%;
-  background-color: purple;
-  background-position: center;
+    background-image: url(http://www.scdn.co/i/_global/open-graph-default.png);
+    height: 45%;
+    background-color: purple;
+    background-position: center;
 }
 
 #top-tool{
-    width: 100%;
-    height: 5%;
+    height: 3.5%;
     background-color: #2E2E2E;
-    margin-left:5px;
 }
 
 #right-col{
-    width: 15%;
+    position: fixed;
+    margin-left: 85%;
     height: 100vh;
     background-color: #2E2E2E;
     color: white;
@@ -71,8 +79,14 @@ body {
 .upgrade-btn{
     color: white;
     background-color: #2E2E2E;
-    border: white;
+    border-width: medium;
     border-color: white;
+    font-size: 0.9vw;
+    height: 85%;
+    margin: 0.3vw;
+    margin-left: 70%;   
+    padding: 0;
+    width: 10%;
 }
 
 footer{
@@ -93,4 +107,23 @@ footer{
 
 .suggestion-boxes-description{
     padding-top: 0.5vw;
+}
+
+
+#bootstrap-override-dropdown-button{
+    background-color: #2E2E2E;
+    border: none;
+    margin: 0.1vw;
+    height: 85%;
+    font-size: 1vw;
+    margin-left: 17%;
+}
+
+#dropdown-img{
+    margin-right: 0.4vw;
+}
+
+.scrolled-main{
+    overflow: scroll;
+    height: 42.5%;
 }
