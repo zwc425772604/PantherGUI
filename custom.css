@@ -128,13 +128,10 @@ footer{
 }
 
 .scrolled-main{
-<<<<<<< HEAD
     overflow-y: scroll;
     height: 88vh;
 }
-=======
-    overflow: scroll;
-    height: 42.5%;
+
 }
 #playbar-save-anchor-tag
 {
@@ -175,4 +172,4 @@ ul#playbar-center-icons li {
 {
   background-color: gray;
 }
->>>>>>> c7131dce8322d9319541b59da10e2c32bf4f24b5
+
