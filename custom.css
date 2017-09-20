@@ -26,10 +26,11 @@ body {
 
 .color-nav-header{
     color: white;
-    padding-left: 7.5%;
+    padding: 0.5rem 1rem;
     font-weight: 200;
     font-size: 1vw;
 }
+
 #bootstrap-overrides-navbar{
     width: 100%;
     
@@ -37,7 +38,10 @@ body {
 #bootstrap-overrides-navbar-navitems{
     
 }
-
+a:link, a:visited, a:hover, a:active {
+    
+    color: white;
+}
 #navbar-ul{
     list-style: none;    
     padding: 0;
@@ -55,13 +59,13 @@ body {
 
 #bannerimage{
     background-image: url(http://www.scdn.co/i/_global/open-graph-default.png);
-    height: 45%;
+    height: 35vh;
     background-color: purple;
     background-position: center;
 }
 
 #top-tool{
-    height: 3.5%;
+    height: 5vh;
     background-color: #2E2E2E;
 }
 
@@ -124,6 +128,6 @@ footer{
 }
 
 .scrolled-main{
-    overflow: scroll;
-    height: 42.5%;
+    overflow-y: scroll;
+    height: 88vh;
 }
