@@ -39,7 +39,7 @@ body {
 
 }
 a:link, a:visited, a:hover, a:active {
-    
+
     color: white;
 }
 #navbar-ul{
@@ -132,7 +132,7 @@ footer{
     height: 88vh;
 }
 
-}
+
 #playbar-save-anchor-tag
 {
   font-size:24px;
@@ -173,3 +173,7 @@ ul#playbar-center-icons li {
   background-color: gray;
 }
 
+.user-dropdown-button a
+{
+  color:blue;
+}
