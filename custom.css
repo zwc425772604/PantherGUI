@@ -97,6 +97,9 @@ footer{
     width: 100%;
     background-color: #4E4E4E;
     height: 9%;
+    overflow: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 
 .suggestion-container{
