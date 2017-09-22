@@ -420,3 +420,14 @@ ul#playbar-center-icons li {
 {
   width: 300px;
 }
+
+/*  Playbar style */
+.ui-widget-content
+{
+  background-color: #c2d6d6;
+}
+/* green */
+.ui-slider-range
+{
+  background-color: #b3ff99;
+}

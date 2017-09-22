@@ -15,12 +15,8 @@ audio.src = "data/audios/jay.mp3";
 
 $("audio").on("loadedmetadata", function() {
 var t = secondsToTime(audio.duration);
-// $( "slider" ).on( "slidechange", function( event, ui ) {
-//
-// });
-$( "slider" ).on( "slidechange", function() {
-  alert("slider has changed");
-});
+
+
 $('#duration').text(t);
 
 });
@@ -28,13 +24,20 @@ $('#duration').text(t);
 });
 
 $(function() {
-    $("#slider").slider();
+    $("#slider").slider({
+      range: "min",
+      min: 0,
+      max: 100,
+      classes: {
+  "ui-slider": "highlight"
+}
+    });
 
     var startPos = $("#slider").slider("value");
     var   endPos = '';
 
     $("#slider").on("slidestop", function(event, ui) {
-        audio.pause();
+        playSong();
         endPos = ui.value;
 
         if (startPos != endPos) {
@@ -42,10 +45,11 @@ $(function() {
             var length = endPos / 100;
             var currPos = audio.duration * length;
             audio.currentTime = currPos;
+            $("#slider-range .ui-slider-range").css({"background":"green"});
         }
 
         startPos = endPos;
-        audio.play();
+      playSong();
         //alert("startPos is " + startPos);
 
     });
@@ -95,6 +99,7 @@ function updateTime()
    document.getElementById('currentPos').innerHTML = t;
    if (audio.currentTime == audio.duration)
    {
+     //alert("time is up");
      playSong();
    }
   //Fills out the slider with the appropriate position.
