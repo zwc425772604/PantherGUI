@@ -14,38 +14,95 @@ var percentage;
 audio.src = "data/audios/jay.mp3";
 
 $("audio").on("loadedmetadata", function() {
-$('#duration').text(audio.duration);
+var t = secondsToTime(audio.duration);
+// $( "slider" ).on( "slidechange", function( event, ui ) {
+//
+// });
+$( "slider" ).on( "slidechange", function() {
+  alert("slider has changed");
+});
+$('#duration').text(t);
 
 });
 //get HTML5 video time duration
+});
+
+$(function() {
+    $("#slider").slider();
+
+    var startPos = $("#slider").slider("value");
+    var   endPos = '';
+
+    $("#slider").on("slidestop", function(event, ui) {
+        audio.pause();
+        endPos = ui.value;
+
+        if (startPos != endPos) {
+            // do stuff
+            var length = endPos / 100;
+            var currPos = audio.duration * length;
+            audio.currentTime = currPos;
+        }
+
+        startPos = endPos;
+        audio.play();
+        //alert("startPos is " + startPos);
+
+    });
 });
 var isPlaying = false;
 
 function playSong()
 {
-  alert(audio.currentTime);
 
-  //get the current time and then / totaltime
-  //var t = document.get
-  // var ti = "3:26";
-  // var times = ti.split(":");
-  // var minutes = times[0];
-  // var seconds = times[1];
-  // seconds = parseInt(seconds, 10) + (parseInt(minutes, 10) * 60);
-  var aud =   document.getElementById("myAudio");
+  //var aud =   document.getElementById("myAudio");
   if (isPlaying)
   {
     isPlaying = false;
     $("#play-pause-button").text("play_circle_filled");
-    aud.pause();
+    audio.pause();
   }
   else
   {
     isPlaying = true;
     $("#play-pause-button").text("pause_circle_filled");
-    aud.play();
+    audio.play();
   }
 
 
 
+}
+function testPro()
+{
+  alert("haha");
+}
+
+//express seconds as minutes:seconds notation(02:36)
+function secondsToTime(t)
+{
+  var currentSeconds = (Math.floor(t % 60) < 10 ? '0' : '') + Math.floor(t % 60)
+  var currentMinutes = Math.floor(t / 60);
+  return currentMinutes + ":" + currentSeconds;
+}
+
+function updateTime()
+{
+  // var currentSeconds = (Math.floor(audio.currentTime % 60) < 10 ? '0' : '') + Math.floor(audio.currentTime % 60);
+  // var currentMinutes = Math.floor(audio.currentTime / 60);
+  var t = secondsToTime(audio.currentTime);
+  //Sets the current song location compared to the song duration.
+//  document.getElementById('currentPos').innerHTML = currentMinutes + ":" + currentSeconds;
+   document.getElementById('currentPos').innerHTML = t;
+   if (audio.currentTime == audio.duration)
+   {
+     playSong();
+   }
+  //Fills out the slider with the appropriate position.
+   var percentageOfSong = (audio.currentTime/audio.duration);
+   var sliderValue = percentageOfSong * 100;
+   $( "#slider" ).slider( "value",sliderValue );
+  // var percentageOfSlider = document.getElementById('songSlider').offsetWidth * percentageOfSong;
+  //
+  // //Updates the track progress div.
+  // document.getElementById('trackProgress').style.width = Math.round(percentageOfSlider) + "px";
 }

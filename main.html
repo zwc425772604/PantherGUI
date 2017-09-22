@@ -1,320 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Panthers Spotify</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--CSS ref-->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="custom.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--js ref-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+//   $( function() {
+//     $( "#slider" ).slider();
+//   });
+//   $( "#slider" ).slider({
+//   change: function( event, ui ) {
+//     alert("value has change");
+//   }
+// });
+  </script>
 </head>
+
 <body>
-<div class="container-fluid">
-      <div class="row">
-        <nav class="col-auto sidebar" id="bootstrap-overrides-sidebar">
-
-          <ul class="nav flex-column" >
-            <li class="nav-item">
-              <a class="nav-link color-nav " href="#">Browse <span class="sr-only">(current)</span></a>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="sidebar" id="left-sidebar">
+        <ul class="nav flex-column" >
+          <!--First Section: browse and radio-->
+          <li class="nav-item">
+            <a class="nav-link color-nav" href="#">Browse</a>
+          </li>
+          <li class="nav-item" id="extra-padding">
+            <a class="nav-link color-nav" href="#">Radio</a>
+          </li>
+          <!--Your Library Section-->
+          <li>
+            <p class="color-nav-header">YOUR LIBRARY</p>
+              <ul class="nav nav-stacked flex-column">
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Your Daily Mix</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Recently Played</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Songs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Albums</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Artists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Stations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Local Files</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link color-nav" href="#">Videos</a>
+                </li>
+                <li class="nav-item" id="extra-padding">
+                  <a class="nav-link color-nav" href="#">Podcasts</a>
+                </li>
+              </ul>
             </li>
-            <li class="nav-item" id="bootstrap-overrides-navitem-extra-padding">
-              <a class="nav-link color-nav" href="#">Radio</a>
-            </li>
-
+            <!--Playlist Section-->
             <li>
-                <a href="#" class="color-nav-header">YOUR LIBRARY</a>
+              <p class="color-nav-header">PLAYLISTS</p>
                 <ul class="nav nav-stacked flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Your Daily Mix</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Recently Played</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Songs</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Albums</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Stations</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Local Files</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Videos</a>
-                    </li>
-                    <li class="nav-item" id="bootstrap-overrides-navitem-extra-padding">
-                      <a class="nav-link color-nav" href="#">Podcasts</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#" class="color-nav-header">PLAYLISTS</a>
-                <ul class="nav nav-stacked flex-column">
-                    <li class="nav-item">
-                      <a class="nav-link color-nav" href="#">Discover Weekly</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link color-nav" href="#">Discover Weekly</a>
+                  </li>
                 </ul>
             </li>
           </ul>
-
         </nav>
-
+        <!--Main Page-->
         <main class="main-page">
-
+        <!--Scrollable Main Page Section-->
+          <div class="scrolled-main" id="style-1">
+            <!--Top Tool Section-->
             <div class ="row" id="top-tool">
-
-
-                <div  style="margin-left:70%;">
-                  <button class="w3-button w3-black" onclick="">Upgrade</button>
+              <div id="top-tool-page-change">
+                  <button class="top-tool-page-button"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></button>
+                  <button class="top-tool-page-button"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></button>
+              </div>
+              <div class="col-sm-3 col-sm-offset-3" id="top-tool-search">
+                <div class="input-group stylish-input-group"  id="top-tool-search">
+                  <input type="text" class="form-control"  placeholder="Search" >
+                  <span class="input-group-addon">
+                    <button type="submit">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div id="top-tool-upgrade-and-user">
+                <button class="w3-button w3-black upgrade-button" onclick="" id="top-tool-upgrade">UPGRADE</button>
                   <div class="w3-dropdown-hover">
-                    <button class="w3-button w3-black">
-                      <img src="http://orig05.deviantart.net/f239/f/2011/089/3/3/jack_skellington_facebook_icon_by_valashard-d3cu1bt.jpg" width=25px height=25px class="rounded-circle" alt="Generic placeholder thumbnail"
-                      id="dropdown-img"> <span class="user_name">user name </span></button>
-                    <div class="w3-dropdown-content w3-bar-block w3-border user-dropdown-button">
-                       <a href="#" class="w3-bar-item w3-button">Private Session</a>
-                       <a href="#" class="w3-bar-item w3-button">Account</a>
-                       <a href="#" class="w3-bar-item w3-button">Upgrade Your Account</a>
-                       <a href="#" class="w3-bar-item w3-button">Settings</a>
-                       <a href="#" class="w3-bar-item w3-button">Log Out</a>
-                    </div>
+                    <button class="w3-button w3-black" id="top-tool-profile">
+                      <img width=25px height=25px class="rounded-circle" alt="Generic placeholder thumbnail" id="dropdown-img"  src="http://orig05.deviantart.net/f239/f/2011/089/3/3/jack_skellington_facebook_icon_by_valashard-d3cu1bt.jpg">
+                      <span class="user_name">Username</span>
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </button>
+                      <div class="w3-dropdown-content w3-bar-block w3-border user-dropdown-button">
+                        <a href="#" class="w3-bar-item w3-button" id="dropdown-item">Session</a>
+                        <a href="#" class="w3-bar-item w3-button" id="dropdown-item">Account</a>
+                        <a href="#" class="w3-bar-item w3-button" id="dropdown-item">Upgrade Your Account</a>
+                        <a href="#" class="w3-bar-item w3-button" id="dropdown-item">Settings</a>
+                        <a href="#" class="w3-bar-item w3-button" id="dropdown-item">Log Out</a>
+                      </div>
                   </div>
                 </div>
-                <!--
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="bootstrap-override-dropdown-button">
-
-
-                      <span id="user_name"> User name </span>
-
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                  </ul>
-                </div> -->
-
-
+              </div>
+            <!--Banner Image-->
+            <div id="bannerimage" style="background-image: url(http://ep.id-t.com/dam/asset/pictures/website-content/newsitems/banner-sensation-spotify-playlist-.jpeg?uuid=6j3c6dvv5ncwviv4yuwizw7tfa);"></div>
+            <!--NavBar-->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark"
+                 id="bootstrap-overrides-navbar">
+                <ul class="navbar-nav mr-auto" id="navbar-ul">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">OVERVIEW </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CHARTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">GENRES & MOODS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">NEW RELEASES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">DISCOVER</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCERTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">MORE</a>
+                  </li>
+                </ul>
+            </nav>
+            <!--Container Boxes-->
+            <div class="suggestion-container">
+              <div class="suggestion-container-top">
+                <h3 class="suggestion-topic">Topics</h3>
+                <button class="suggestion-top-page-button"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></button>
+                <button class="suggestion-top-page-button-right"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></button>
+              </div>
+              <div class="line"></div>
+                <section class="row placeholders">
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                </section>
             </div>
-
-            <div class="scrolled-main">
-
-                <div id="bannerimage"></div>
-
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark"
-                     id="bootstrap-overrides-navbar">
-                    <ul class="navbar-nav mr-auto" id="navbar-ul">
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">OVERVIEW </a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">CHARTS</a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">GENRES & MOODS</a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">NEW RELEASES</a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">DISCOVER</a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">CONCERTS</a>
-                      </li>
-                      <li class="nav-item" id="bootstrap-overrides-navbar-navitems">
-                        <a class="nav-link" href="#">MORE</a>
-                      </li>
-                    </ul>
-                </nav>
-
-                <div class="suggestion-container">
-                    <h3>Chill</h3>
-                    <section class="row placeholders">
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                            <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
+            <!--Container-->
+            <div class="suggestion-container">
+                <div class="line"></div>
+                <section class="row placeholders">
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://profilerehab.com/facebook_covers/grunge/maroon_grunge_cover_15.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
                         </div>
 
-                    </section>
-                </div>
-
-                <div class="suggestion-container">
-                    <h3>Chill</h3>
-                    <section class="row placeholders">
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                            <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.mosta2bal.com/vb/badeencache/2/10215style.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
                         </div>
 
-                    </section>
-                </div>
-
-                <div class="suggestion-container">
-                    <h3>Chill</h3>
-                    <section class="row placeholders">
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                            <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.trendycovers.com/covers/music_is_my_boyfriend_facebook_cover_1351699049.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
                         </div>
 
-                    </section>
-                </div>
-                <div class="suggestion-container">
-                    <h3>Chill</h3>
-                    <section class="row placeholders">
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                            <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-2 placeholder suggestion-boxes">
-                          <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
-                          <div class="suggestion-boxes-description">
-                              <h6>Discover Weekly</h6>
-                              <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
-                            </div>
-                        </div>
-
-                    </section>
-                </div>
+                    </div>
+                </section>
             </div>
+            <div class="suggestion-container">
+              <div class="suggestion-container-top">
+                <h3 class="suggestion-topic">Topics</h3>
+                <button class="suggestion-top-page-button"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></button>
+                <button class="suggestion-top-page-button-right"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></button>
+              </div>
+              <div class="line"></div>
+                <section class="row placeholders">
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+            <!--Container-->
+            <div class="suggestion-container">
+                <div class="line"></div>
+                <section class="row placeholders">
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://profilerehab.com/facebook_covers/grunge/maroon_grunge_cover_15.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.mosta2bal.com/vb/badeencache/2/10215style.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.trendycovers.com/covers/music_is_my_boyfriend_facebook_cover_1351699049.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <div class="suggestion-container">
+              <div class="suggestion-container-top">
+                <h3 class="suggestion-topic">Topics</h3>
+                <button class="suggestion-top-page-button"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></button>
+                <button class="suggestion-top-page-button-right"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></button>
+              </div>
+              <div class="line"></div>
+                <section class="row placeholders">
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://www.fuse.tv/image/56fe73a1e05e186b2000009b/768/512/the-boxer-rebellion-ocean-by-ocean-album-cover-full-size.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://spark.adobe.com/images/landing/examples/blizzard-album-cover.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://i.pinimg.com/736x/8d/e4/20/8de42050e671b93b1d6bad2f2764ba89--calm-graphic-design-sun-graphic.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="https://peopledotcom.files.wordpress.com/2017/08/taylor-swift7.jpg?w=2000&h=2013" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 placeholder suggestion-boxes">
+                    <img src="http://illusion.scene360.com/wp-content/uploads/2014/10/computergraphics-album-covers-2014-05.jpg" width=100% height=width class="img-rounded" alt="Generic placeholder thumbnail">
+                    <div class="suggestion-boxes-description">
+                      <h6>Discover Weekly</h6>
+                      <div class="text-muted">Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                    </div>
+                  </div>
+                </section>
+            </div>
+            <!--Container-->
+            <div class="suggestion-container">
+                <div class="line"></div>
+                <section class="row placeholders">
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://profilerehab.com/facebook_covers/grunge/maroon_grunge_cover_15.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.mosta2bal.com/vb/badeencache/2/10215style.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 placeholder medium-boxes">
+                        <img src="http://www.trendycovers.com/covers/music_is_my_boyfriend_facebook_cover_1351699049.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
+                        <div >
+                          <h6 class="text-over-image">Discover Weekly</h6>
+                          <div class="text-muted text-over-image-desp" >Your weekly mixtape of fresh music. Enjoy new discoveries and deep ..</div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+          </div>
         </main>
-
+        <!--Right Most Column-->
         <div id="right-col">
-          <h1>See what your friend are playing~~ Oh wait you got none</h1>
+          <div class="right-col-top">
+            <h2 id="right-col-topic">Friend activity</h2>
+            <div class="line"></div>
+          </div>
+          <div class="right-col-section row">
+            <div><img src="http://weclipart.com/gimg/0A3C841B9FA4F2C6/13099629981030824019profile.svg.hi.png" class="rounded-circle right-col-image" alt="Generic placeholder thumbnail"></div>
+            <div class="right-col-desp">
+              <div class="right-col-friends-name">Your Only Friend</div>
+              <div class="right-col-song-name">Discover Weekly</div>
+              <div class="right-col-singer">Kenny Rogers</div>
+            </div>
+          </div>
+          <button onclick="" class="w3-button right-col-button">FIND FRIENDS</button>
         </div>
-
       </div>
     </div>
+    <!--Footer Section-->
     <footer class="fixed-bottom">
       <div class="row">
         <div class="col-md-3 col-sm-3" id = "playbar-artist-info">
@@ -324,9 +410,9 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading"> <a href="#" id="playbar-song-href"> <span id="playbar-song-name">   Song name     </span> </a></h4>
-              <p> <a href="#" id ="playbar-artist-href"> <span id="playbar-artist-name"> Artist name </span>
+              <p> <a href="#" id ="playbar-artist-href"/> <span id="playbar-artist-name"> Artist name </span>
                 <a href="#">
-                  <span class="glyphicon glyphicon-plus"></span>
+                  <span class="glyphicon glyphicon-search"></span>
                 </a>
                 <a href="#" data-toggle ="tooltip-save-library" title= "Save to Your Library" id="playbar-save-anchor-tag"><i class="fa fa-plus-square"></i></a>
               </p>
@@ -352,31 +438,32 @@
           <div class="row">
             <div class="col-md-3">
               <!-- offset -->
-              <div class = "playback-bar-current-time" style="float:right;"> <span class="currentPos"> 0:00 </span></div>
+              <div class = "playback-bar-current-time" style="float:right; margin-right: 12px;"> <span id="currentPos"> 0:00 </span></div>
             </div>
             <div class="col-md-6 playback-bar">
-               <div class="progress">
-                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+               <!-- <div class="progress" onseeked="testing(this.child);">
+                 <div class="progress-bar"  id="progress_bar_play" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:10%">
                    <span class="sr-only">70% Complete</span>
                  </div>
-               </div>
+               </div> -->
+               <div id="slider"></div>
                <div class="audio-bar">
                  <!-- use javascript to play the songs -->
-                 <audio id="myAudio">
+                 <audio id="myAudio" ontimeupdate="updateTime()">
                     <source src="" type="audio/mpeg">
                   Your browser does not support the audio element.
                  </audio>
                </div>
              </div>
               <div class="col-md-3">
-                <div class="playback-bar-finish-time"> <span id="duration">  4:14 </span> </div>
+                <div class="playback-bar-finish-time" style="margin-left: 12px;"> <span id="duration">  0:00 </span> </div>
               </div>
             </div>
 </div>
         <div class="col-md-3 col-sm-3" id="playbar-right">
           <ul id="playbar-right-icons">
-            <li><button class="unstyle-buttons" data-toggle="tooltip-queue" title="Queue" id="playbar-queue-anchor-tag"> <i class="material-icons">add_to_queue</i></a></li>
-            <li><button class="unstyle-buttons" data-toggle="tooltip-mute" title="Mute"  id="playbar-mute-anchor-tag"><i class="material-icons">volume_up</i></a></li>
+            <li><button class="unstyle-buttons" data-toggle="tooltip-queue" title="Queue" id="playbar-queue-anchor-tag"/> <i class="material-icons">add_to_queue</i></li>
+            <li><button class="unstyle-buttons" data-toggle="tooltip-mute" title="Mute"  id="playbar-mute-anchor-tag"/><i class="material-icons">volume_up</i></li>
 
           </ul>
         </div>
