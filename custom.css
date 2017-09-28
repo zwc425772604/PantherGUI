@@ -120,7 +120,7 @@ p.color-nav-header:hover{
 
 .fa-angle-left{
     color:darkgrey!important;
-    margin: 0.35vw 0.5vw 0.35vw 0.5vw;
+    margin: 5% 0.5vw 0.35vw 0.5vw;
 }
 
 .fa-angle-left:hover{
@@ -129,7 +129,7 @@ p.color-nav-header:hover{
 
 .fa-angle-right{
     color:darkgrey !important;
-    margin: 0.35vw 0.5vw 0.35vw 0.5vw;
+    margin: 1% 0.5vw 0.35vw 0.5vw;
 }
 
 .fa-angle-right:hover{
@@ -159,10 +159,10 @@ p.color-nav-header:hover{
 }
 
 #top-tool-upgrade-and-user{
-    margin-left: 30%;
+    margin-left: 25%;
     position: relative;
-    margin-top: 0.3%;
-    width: 20vw;
+    margin-top: 0%;
+    width: 30.25%;
 }
 
 #top-tool-upgrade{
@@ -189,6 +189,7 @@ p.color-nav-header:hover{
 
 #top-tool-profile{
     background-color: #2e2e2e !important;
+    height: 5vh !important;
 }
 
 #top-tool-profile:hover{
@@ -274,8 +275,9 @@ p.color-nav-header:hover{
     border:0;
 }
 .suggestion-boxes{
-    margin: 0.8%;
-    margin-left: 1.2%;
+    margin: 0.9%;
+    margin-left: 1.5%;
+    margin-top: 2%;
 }
 
 .suggestion-boxes-description{
@@ -357,7 +359,7 @@ p.color-nav-header:hover{
 .right-col-button{
     background-color: #2e2e2e !important;
     border: 3px solid white;
-    margin: 2vw 0vw 1vw 3.5vw;
+    margin: 2vw 0vw 1vw 18% ;
     border: 2px solid white !important;
     border-radius: 5%;
 }
@@ -430,4 +432,19 @@ ul#playbar-center-icons li {
 .ui-slider-range
 {
   background-color: #b3ff99;
+}
+.ui-widget-content
+{
+  background-color: #c2d6d6;
+}
+.ui-slider-range
+{
+  background-color: #b3ff99;
+}
+.bar {
+  width: 60%;
+  height: 5px;
+  position: relative;
+  background: #1d2e38;
+  border-radius: 40px;
 }
