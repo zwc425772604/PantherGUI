@@ -20,6 +20,11 @@
  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
    <link rel="stylesheet" href="custom.css">
+   <script>
+   $(document).ready(function(){
+     $("#overview_container").siblings().hide();
+   });
+   </script>
 </head>
 
 <body>
@@ -123,25 +128,25 @@
                  id="bootstrap-overrides-navbar">
                 <ul class="navbar-nav mr-auto tab" id="navbar-ul">
                   <li class="nav-item">
-                    <a class="nav-link tablinks" href="javascript:displayOverview()">OVERVIEW </a>
+                    <a class="nav-link tablinks" href="javascript:displayContainer('overview_container')">OVERVIEW </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link tablinks" href="javascript:displayCharts()">CHARTS</a>
+                    <a class="nav-link tablinks" href="javascript:displayContainer('charts_container')">CHARTS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:openCity(event, 'Paris')">GENRES &amp MOODS</a>
+                    <a class="nav-link" href="javascript:displayContainer('genre_container')">GENRES &amp MOODS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">NEW RELEASES</a>
+                    <a class="nav-link" href="javascript:displayContainer('new_releases_container')">NEW RELEASES</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">DISCOVER</a>
+                    <a class="nav-link" href="javascript:displayContainer('discover_container')">DISCOVER</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">CONCERTS</a>
+                    <a class="nav-link" href="javascript:displayContainer('concerts_container')">CONCERTS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">MORE</a>
+                    <a class="nav-link" href="javascript:void(0)">MORE</a>
                   </li>
                 </ul>
             </nav>
@@ -157,7 +162,15 @@
   <p>Paris is the capital of France.</p>
 </div> -->
 
-          <div id = "middle-content" w3-include-html="overview.html"></div>
+            <div id= "middle-container">
+              <div id = "overview_container" w3-include-html="overview.html"></div>
+              <div id = "charts_container" w3-include-html="charts.html"></div>
+              <div id = "genre_container" w3-include-html="overview.html"></div>
+              <div id = "new_releases_container" w3-include-html="charts.html"></div>
+              <div id = "discover_container" w3-include-html="overview.html"></div>
+              <div id = "concerts_container" w3-include-html="charts.html"></div>
+              <!-- <div id = "middle-content"></div> -->
+            </div>
             <!-- <div id = "middle-content"></div> -->
         </div> <!-- closed tag for scrolled-main -->
         </main>
@@ -178,14 +191,13 @@
         }
         // document.getElementById(cityName).style.display = "block";
         }
-        function displayCharts()
+        function displayContainer(name)
         {
-          $('#middle-content').load('charts.html');
+          var n = "#" + name;
+          $(n).siblings().hide();
+          $(n).show();
         }
-        function displayOverview()
-        {
-          $('#middle-content').load('overview.html');
-        }
+
   </script>
         <!--Right Most Column-->
         <div id="right-col">

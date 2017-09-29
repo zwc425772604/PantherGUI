@@ -116,3 +116,6 @@ function displayCharts()
 {
   $('#middle-content').load('charts.html');
 }
+// $(document).ready(function(){
+//   $("#overview_content").siblings().hide();
+// });
