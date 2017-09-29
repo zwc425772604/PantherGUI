@@ -2,7 +2,7 @@
 var audio;
 $(document).ready(function(){
   //  $('[data-toggle="tooltip"]').tooltip();
-
+$('#middle-content').load('overview.html');
 
 audio = $("audio")[0];
 var current = $('span.currentPos');
@@ -110,4 +110,9 @@ function updateTime()
   //
   // //Updates the track progress div.
   // document.getElementById('trackProgress').style.width = Math.round(percentageOfSlider) + "px";
+}
+
+function displayCharts()
+{
+  $('#middle-content').load('charts.html');
 }
