@@ -22,7 +22,9 @@
    <link rel="stylesheet" href="custom.css">
    <script>
    $(document).ready(function(){
-     $("#overview_container").siblings().hide();
+     //hide all other containers in <div id= 'middle-content'> beside except overview_container
+     //$("#overview_container").siblings().hide();
+     $("#main-changing-content").load("browse.html");
    });
    </script>
 </head>
@@ -122,8 +124,9 @@
                 </div>
               </div>
             <!--Banner Image-->
-            <div id="bannerimage" style="background-image: url(http://ep.id-t.com/dam/asset/pictures/website-content/newsitems/banner-sensation-spotify-playlist-.jpeg?uuid=6j3c6dvv5ncwviv4yuwizw7tfa);"></div>
-            <!--NavBar-->
+          <div id = "main-changing-content">
+            <!-- <div id="bannerimage" style="background-image: url(http://ep.id-t.com/dam/asset/pictures/website-content/newsitems/banner-sensation-spotify-playlist-.jpeg?uuid=6j3c6dvv5ncwviv4yuwizw7tfa);"></div>
+
             <nav class="navbar navbar-expand-md bg-dark navbar-dark"
                  id="bootstrap-overrides-navbar">
                 <ul class="navbar-nav mr-auto tab" id="navbar-ul">
@@ -150,17 +153,6 @@
                   </li>
                 </ul>
             </nav>
-            <!-- <div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div> -->
 
             <div id= "middle-container">
               <div id = "overview_container" w3-include-html="overview.html"></div>
@@ -169,36 +161,26 @@
               <div id = "new_releases_container" w3-include-html="charts.html"></div>
               <div id = "discover_container" w3-include-html="overview.html"></div>
               <div id = "concerts_container" w3-include-html="charts.html"></div>
-              <!-- <div id = "middle-content"></div> -->
-            </div>
+
+            </div> -->
             <!-- <div id = "middle-content"></div> -->
         </div> <!-- closed tag for scrolled-main -->
+      </div>
         </main>
 
-  <script>
+  <!-- <script>
 
    w3.includeHTML();
+   function displayContainer(name)
+   {
+     var n = "#" + name;
+     $(n).siblings().hide();
+     $(n).show();
+   }
 
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        // document.getElementById(cityName).style.display = "block";
-        }
-        function displayContainer(name)
-        {
-          var n = "#" + name;
-          $(n).siblings().hide();
-          $(n).show();
-        }
 
-  </script>
+
+  </script> -->
         <!--Right Most Column-->
         <div id="right-col">
           <div class="right-col-top">

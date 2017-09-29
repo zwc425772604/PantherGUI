@@ -2,7 +2,7 @@
 var audio;
 $(document).ready(function(){
   //  $('[data-toggle="tooltip"]').tooltip();
-$('#middle-content').load('overview.html');
+// $('#middle-content').load('overview.html');
 
 audio = $("audio")[0];
 var current = $('span.currentPos');
