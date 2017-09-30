@@ -26,6 +26,22 @@
      //$("#overview_container").siblings().hide();
      $("#main-changing-content").load("browse.html");
    });
+   function displayLeftNavbarContent(nav_name)
+   {
+     //compare the string
+     if (nav_name.localeCompare('browse') == 0)
+     {
+       $("#main-changing-content").load("browse.html");
+     }
+     else if (nav_name.localeCompare('albums') == 0)
+     {
+        $("#main-changing-content").load("album.html");
+     }
+     else
+     {
+        $("#main-changing-content").load("overview.html");
+     }
+   }
    </script>
 </head>
 
@@ -36,41 +52,41 @@
         <ul class="nav flex-column" >
           <!--First Section: browse and radio-->
           <li class="nav-item">
-            <a class="nav-link color-nav" href="#">Browse</a>
+            <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('browse')">Browse</a>
           </li>
           <li class="nav-item" id="extra-padding">
-            <a class="nav-link color-nav" href="#">Radio</a>
+            <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('radio')">Radio</a>
           </li>
           <!--Your Library Section-->
           <li>
             <p class="color-nav-header">YOUR LIBRARY</p>
               <ul class="nav nav-stacked flex-column">
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Your Daily Mix</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('your_daily_mix')">Your Daily Mix</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Recently Played</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('recently_played')">Recently Played</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Songs</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('songs')">Songs</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Albums</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('albums')">Albums</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Artists</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('artists')">Artists</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Stations</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('stations')">Stations</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Local Files</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('local_files')">Local Files</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link color-nav" href="#">Videos</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('videos')">Videos</a>
                 </li>
                 <li class="nav-item" id="extra-padding">
-                  <a class="nav-link color-nav" href="#">Podcasts</a>
+                  <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('podcasts')">Podcasts</a>
                 </li>
               </ul>
             </li>
