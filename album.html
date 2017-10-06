@@ -2,22 +2,70 @@
 <style type="text/css">
   #filter_keyword
   {
-    background-image: url(http://storage.conduit.com/images/searchengines/search_icon.gif);
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 95%;
+
+    width: 90%;
     font-size: 16px;
-    padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+
 
   }
+
   /* for the close button in input type search */
   input[type="search"]::-webkit-search-cancel-button
   {
     -webkit-appearance: searchfield-cancel-button;
   }
+
+  #search_span
+  {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    color: #cccccc;
+  }
+  #filter_keyword
+  {
+      background-color: #343a40;
+      border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;border:none;
+  color: #cccccc;
+  }
+  #filter_container
+  {
+    margin-top: 3%;
+
+
+  }
+
 </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+});
+//style for the filter container
+$( "#filter_container" )
+.mouseover(function() {
+  $('#filter_keyword').css('color', 'white');
+  $('#search_span').css('color','white');
+})
+.mouseout(function(){
+  $('#filter_keyword').css('color','#cccccc');
+  $('#search_span').css('color','#cccccc');
+});
+//need to add the close icon at the right in input 
+$( "#filter_keyword" )
+.focus(function(){
+  $('#filter_keyword').css('background-color','gray');
+  $('#search_span').css('background-color','gray');
+});
+$("#filter_keyword").blur(function(){
+  $('#filter_keyword').css('background-color','#343a40');
+  $('#search_span').css('background-color','#343a40');
+    });
+
+
+</script>
 
 <div class="suggestion-container" id = "release-container" style="margin-top: 10%;">
   <div class="suggestion-container-top">
@@ -25,8 +73,15 @@
   </div>
   <div class="line"></div>
 
-  <div id = "filter_text" style="margin-top: 3%;">
+  <!-- <div id = "filter_text" style="margin-top: 3%;">
     <input type="search" id="filter_keyword" name="q" onkeyup="filterAlbum()" placeholder="Filter">
+  </div> -->
+  <div class="input-group" id="filter_container">
+    <span class="input-group-addon" id="search_span">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </span>
+  <input type="search" id="filter_keyword" name="q" onkeyup="filterAlbum()" placeholder="Filter">
+
   </div>
 
 </div>
@@ -131,27 +186,3 @@
 
       </section>
   </div>
-
-<!--Container for release 2-->
-<div class="suggestion-container" id = "release-container">
-    <div class="line"></div>
-    <section class="row placeholders">
-        <div class="col-md-5 placeholder medium-boxes">
-            <img src="http://profilerehab.com/facebook_covers/grunge/maroon_grunge_cover_15.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
-            <div >
-              <h6 class="text-over-image">Top 50 by Country</h6>
-
-            </div>
-
-        </div>
-        <div class="col-md-5 placeholder medium-boxes">
-            <img src="http://www.mosta2bal.com/vb/badeencache/2/10215style.jpg" width=110% height=70% class="img-rounded image-over-by-text" alt="Generic placeholder thumbnail">
-            <div >
-              <h6 class="text-over-image">Viral 50 by Country</h6>
-
-            </div>
-
-        </div>
-
-    </section>
-</div>
