@@ -1,0 +1,158 @@
+<!--  Container for DISCOVER -->
+<style type="text/css">
+
+
+  /* for the close button in input type search */
+  input[type="search"]::-webkit-search-cancel-button
+  {
+    -webkit-appearance: searchfield-cancel-button;
+  }
+
+  #search_span
+  {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    color: #cccccc;
+  }
+  #filter_keyword
+  {
+    width: 90%;
+    font-size: 16px;
+      background-color: #343a40;
+      border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;border:none;
+  color: #cccccc;
+  }
+  #filter_container
+  {
+    margin-top: 3%;
+
+  }
+
+  .formButton
+  {
+      display:block;
+       border-radius: 10px;
+        color:white;
+        width: 90px;
+        background-color:#00cc00;
+  }
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+});
+//style for the filter container
+$( "#filter_container" )
+.mouseover(function() {
+  $('#filter_keyword').css('color', 'white');
+  $('#search_span').css('color','white');
+})
+.mouseout(function(){
+  $('#filter_keyword').css('color','#cccccc');
+  $('#search_span').css('color','#cccccc');
+});
+//need to add the close icon at the right in input
+$( "#filter_keyword" )
+.focus(function(){
+  $('#filter_keyword').css('background-color','gray');
+  $('#search_span').css('background-color','gray');
+});
+$("#filter_keyword").blur(function(){
+  $('#filter_keyword').css('background-color','#343a40');
+  $('#search_span').css('background-color','#343a40');
+    });
+
+
+
+</script>
+
+<div class="suggestion-container" id = "release-container" style="margin-top: 3%;">
+  <div class="suggestion-container-top">
+    <h3 class="suggestion-topic" style="font-size: 4em;">Songs</h3>
+  </div>
+  <div class = "">
+      <button class="btn formButton" onclick="playSong();">  <span class="playingStatus"> PLAY </span></button>
+  </div>
+
+
+  <!-- filter input div block -->
+  <div class="input-group" id="filter_container">
+    <span class="input-group-addon" id="search_span">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </span>
+  <input type="search" id="filter_keyword" name="q" onkeyup="filterAlbum()" placeholder="Filter">
+  </div>
+
+</div>
+
+<script>
+  //filter by texts entered
+  function filterAlbum()
+  {
+
+  }
+  //sort by keyword handler
+  $('#sorted_by_keyword').on('change',function(){
+    //alert(this.value);
+  })；
+</script>
+
+  <!--  Container for track list -->
+  <div class="suggestion-container" id = "charts-container">
+
+      <!-- track list section header -->
+      <!-- <section class="row placeholders" id = "infoContainer">
+          <div class="col-md-1 tracklist_play_button"></div>
+          <div class="col-md-1 tracklist_save_button"></div>
+          <div class="col-md-3 tracklist_song_title">
+            <p> TITLE </p>
+          </div>
+          <div class="col-md-2 tracklist_artist_name">
+            <p> ARTIST </p>
+          </div>
+          <div class="col-md-2 tracklist_album_name">
+            <p> ALBUM </p>
+          </div>
+          <div class="col-md-1 tracklist_date_added">
+            <p> <i class="fa fa-calendar" aria-hidden="true"></i> </p>
+          </div>
+          <div class="col-md-1 tracklist_more_button"></div>
+          <div class="col-md-1 tracklist_song_duration">
+            <p> <i class="fa fa-clock-o" aria-hidden="true"></i> </p>
+          </div>
+      </section> -->
+        <!-- track list section body content
+             list of songs -->
+      <!-- <section class="row placeholders">
+          <div class="col-md-1 tracklist_play_button">
+            <button class="unstyle-buttons" data-toggle="tooltip-play" title="Play" id="playbar-play-button" onclick="playSong()">
+               <i class="material-icons"><span class="play-pause-button">play_circle_filled</span></i></button>
+          </div>
+          <div class="col-md-1 tracklist_save_button">
+            <button class="unstyle-buttons" data-toggle="tooltip-save" id = "tracklist-save-button" onclick="removeSong()">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="col-md-3 tracklist_song_title">
+            <p> HUMBLE. </p>
+          </div>
+          <div class="col-md-2 tracklist_artist_name">
+            <p> Kendrick Lamar </p>
+          </div>
+          <div class="col-md-2 tracklist_album_name">
+            <p> DAMN. </p>
+          </div>
+          <div class="col-md-1 tracklist_date_added">
+            <p> 2017-09-29</p>
+          </div>
+          <div class="col-md-1 tracklist_more_button"></div>
+          <div class="col-md-1 tracklist_song_duration">
+            <p> 2:57 </p>
+          </div>
+      </section> -->
+  </div>

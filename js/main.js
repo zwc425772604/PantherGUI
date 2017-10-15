@@ -11,7 +11,7 @@ var currentPos;
 var maxduration;
 var percentage;
 
-audio.src = "data/audios/jay.mp3";
+audio.src = "data/audios/Faded.mp3";
 
 $("audio").on("loadedmetadata", function() {
 var t = secondsToTime(audio.duration);
@@ -63,13 +63,15 @@ function playSong()
   if (isPlaying)
   {
     isPlaying = false;
-    $("#play-pause-button").text("play_circle_filled");
+    $(".play-pause-button").text("play_circle_filled");
+    $(".playingStatus").text("PLAY"); //change the button status in songs page
     audio.pause();
   }
   else
   {
     isPlaying = true;
-    $("#play-pause-button").text("pause_circle_filled");
+    $(".play-pause-button").text("pause_circle_filled");
+    $(".playingStatus").text("PAUSE"); //change the button status in songs page
     audio.play();
   }
 
