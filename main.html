@@ -50,6 +50,11 @@
         $("#main-changing-content").load("overview.html");
      }
    }
+
+   function openDialogBox()
+   {
+     $("#dialog").dialog();
+   }
    </script>
 </head>
 
@@ -93,11 +98,104 @@
                 <li class="nav-item">
                   <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('videos')">Videos</a>
                 </li>
-                <li class="nav-item" id="extra-padding">
+                <li class="nav-item">
                   <a class="nav-link color-nav" href="javascript:displayLeftNavbarContent('podcasts')">Podcasts</a>
                 </li>
               </ul>
             </li>
+            <hr>
+            <li class= "nav-item">
+              <button class="unstyle-buttons" onclick="openDialogBox()" id="playbar-shuffle-button"> New Playlist</button>
+            </li>
+            <div id="dialog" title="Create Playlist" style="display:none;">
+              <!-- <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+              <p> <button onclick="$('#dialog').dialog('close');">Close </button> -->
+              <!-- <form action="">
+                <div class="row">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-11">
+                    <label> Name</label>
+                  </div>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-11">
+                    <input type="text" id = "new_playlist_name" placeholder="Playlist name">
+                  </div>
+                </div>
+                <div class= "row">
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-4">
+                    <img src="" height= "200px" width="200px">
+                  </div>
+                  <div class="col-sm-7">
+                    <textarea > sds</textarea>
+                  </div>
+                </div>
+                <div style="height: 300px; width: 300px; background-color: yellow">
+                </div>
+
+              </form> -->
+              <!-- <form class="w3-container" action="javascript:user_login()">
+                <div class="w3-section">
+                  <label class="w3-label">Name</label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Playlist name" name="usrname" id = "new_playlist_name" required>
+
+
+                   <span class="w3-label">Image </span>
+                   <img class="w3-input" src="" height= "150px" width="200px">
+                   <span style="margin-top:20px;">Description</span>
+                   <textarea rows="5" cols="50">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+</textarea>
+                  <button class="btn formButton w3-margin-top " id ="loginButton" type="submit">Sign Up</button>
+                </div>
+              </form> -->
+
+<form action="" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><span style="font-size: 1.5em">Name</span></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" id="new_playlist_name" placeholder="Playlist name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><span style="font-size: 1.5em">Image</span></div>
+    <div class="w3-rest">
+      <!-- <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name"> -->
+      <!-- update the image src when the input value is changed -->
+      <input class="w3-input w3-border" type="file" name="pic" accept="image/*">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+    <div class="w3-rest">
+      <!-- <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name"> -->
+      <img src ="" class="img-responsive" width="200px" height="200px">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:30px"><span style="font-size: 1.2em">Description</span></div>
+  <div class="w3-col" style="width:30px; float:right; margin-right: 30px;"><span style="font-size: 1.2em">1/100</span></div>
+
+</div>
+<!-- playlist description -->
+<div class="w3-row w3-section">
+    <textarea class="w3-input w3-border" rows="4" cols="50" placeholder="Give your playlist a catchy description">
+</textarea>
+</div>
+
+<div class="w3-row w3-section">
+
+    <button class="w3-button w3-block w3-section w3-blue w3-ripple">Send</button></div>
+
+    <button class="w3-button w3-block w3-section w3-blue w3-ripple ">Send</button>
+</div>
+<button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Send</button>
+
+</form>
+            </div>
             <!--Playlist Section-->
             <li>
               <p class="color-nav-header">PLAYLISTS</p>
@@ -149,59 +247,10 @@
               </div>
             <!--Banner Image-->
           <div id = "main-changing-content">
-            <!-- <div id="bannerimage" style="background-image: url(http://ep.id-t.com/dam/asset/pictures/website-content/newsitems/banner-sensation-spotify-playlist-.jpeg?uuid=6j3c6dvv5ncwviv4yuwizw7tfa);"></div>
 
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark"
-                 id="bootstrap-overrides-navbar">
-                <ul class="navbar-nav mr-auto tab" id="navbar-ul">
-                  <li class="nav-item">
-                    <a class="nav-link tablinks" href="javascript:displayContainer('overview_container')">OVERVIEW </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link tablinks" href="javascript:displayContainer('charts_container')">CHARTS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:displayContainer('genre_container')">GENRES &amp MOODS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:displayContainer('new_releases_container')">NEW RELEASES</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:displayContainer('discover_container')">DISCOVER</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:displayContainer('concerts_container')">CONCERTS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">MORE</a>
-                  </li>
-                </ul>
-            </nav>
-
-            <div id= "middle-container">
-              <div id = "overview_container" w3-include-html="overview.html"></div>
-              <div id = "charts_container" w3-include-html="charts.html"></div>
-              <div id = "genre_container" w3-include-html="overview.html"></div>
-              <div id = "new_releases_container" w3-include-html="charts.html"></div>
-              <div id = "discover_container" w3-include-html="overview.html"></div>
-              <div id = "concerts_container" w3-include-html="charts.html"></div>
-
-            </div> -->
-            <!-- <div id = "middle-content"></div> -->
-        </div> <!-- closed tag for scrolled-main -->
-      </div>
+        </div>
+      </div><!-- closed tag for scrolled-main -->
         </main>
-
-  <!-- <script>
-
-   w3.includeHTML();
-   function displayContainer(name)
-   {
-     var n = "#" + name;
-     $(n).siblings().hide();
-     $(n).show();
-   }
-
 
 
   </script> -->
@@ -252,7 +301,7 @@
               <ul id="playbar-center-icons">
                 <li><button class="unstyle-buttons" data-toggle="tooltip-queue" title="Shuffle" id="playbar-shuffle-button"> <i class="material-icons">shuffle</i></button></li>
                 <li><button class="unstyle-buttons" data-toggle="tooltip-mute" title="Previous"  id="playbar-prev-button"><i class="material-icons">skip_previous</i></button></li>
-                <li><button class="unstyle-buttons" data-toggle="tooltip-play" title="Play" id="playbar-play-button" onclick="playSong()"> <i class="material-icons"><span class="play-pause-button">play_circle_filled</span></i></button></li>
+                <li><button class="unstyle-buttons" data-toggle="tooltip-play" title="Play" id="playbar-play-button" onclick="playSong()"> <i class="material-icons"><span id="play-pause-button">play_circle_filled</span></i></button></li>
                 <li><button class="unstyle-buttons" data-toggle="tooltip-mute" title="Next"  id="playbar-next-button"><i class="material-icons">skip_next</i></button></li>
                 <li><button class="unstyle-buttons" data-toggle="tooltip-mute" title="Repeat"  id="playbar-repeat-button"><i class="material-icons"><span id="repeat-button-text">repeat</span></i></button></li>
               </ul>
