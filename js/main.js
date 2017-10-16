@@ -59,7 +59,6 @@ var isPlaying = false;
 function playSong()
 {
 
-  //var aud =   document.getElementById("myAudio");
   if (isPlaying)
   {
     isPlaying = false;
