@@ -53,7 +53,19 @@
 
    function openDialogBox()
    {
-     $("#dialog").dialog();
+  //   $("#dialog").dialog();
+     $('#dialog').dialog({
+   //autoOpen: true,
+   height: 350,
+   width: 350,
+   modal: true,
+                 resizable: false,
+   //closeOnEscape: false,
+   //open: function(event, ui) { $(".ui-dialog-titlebar-close", ui).hide(); }
+   //closeOnEscape: false,
+   //beforeclose: function (event, ui) { return false; },
+   dialogClass: 'no-close'
+ });
    }
    </script>
 </head>
